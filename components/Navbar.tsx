@@ -29,7 +29,7 @@ const navVariants = {
 const unclesNavItems = [
   { id: 1, title: "Home", href: "/" },
   { id: 2, title: "Menu", href: "/menu" },
-  { id: 3, title: "About Us", href: "/about" },
+  { id: 3, title: "About Us", href: "/about-us" },
   { id: 4, title: "Locations", href: "/locations" },
   { id: 5, title: "Contact", href: "/contact" },
 ];

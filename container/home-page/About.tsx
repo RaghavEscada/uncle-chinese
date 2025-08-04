@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { ArrowRight, Instagram, MessageCircle, Target, Star, MapPin, Phone, Mail } from 'lucide-react';
 
-// Add type definitions for GSAP and ScrollTrigger
+
 declare global {
   interface Window {
     gsap: {
@@ -962,47 +962,9 @@ export default function UnclesChineseWebsite() {
       <ScrollAnimationSection />
 
       {/* About Section */}
-      <section className="py-20 px-4 relative overflow-hidden" style={{ backgroundColor: '#F8F8F8' }}>
-        {/* 3D Ramen as bold background */}
-        <div style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          width: '140vw',
-          height: '140vh',
-          transform: 'translate(-50%, -50%) scale(1.3)',
-          zIndex: 1,
-          pointerEvents: 'none',
-          userSelect: 'none',
-        }}>
-          <iframe
-            title="Tantanmen Ramen"
-            frameBorder="0"
-            allowFullScreen
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            src="https://sketchfab.com/models/bc2ca26765fc42ca923d766f8ffb4ddd/embed?autospin=1&autostart=1&preload=1&transparent=1&dnt=1&ui_controls=0&ui_infos=0&ui_stop=0&ui_watermark=0"
-            style={{
-              width: '100%',
-              height: '100%',
-              border: 'none',
-              pointerEvents: 'none',
-              userSelect: 'none',
-            }}
-          />
-        </div>
-        {/* Overlay for readability */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          background: 'rgba(255,255,255,0.55)',
-          zIndex: 2,
-          pointerEvents: 'none',
-        }} />
+      <section className="py-20 px-4" style={{ backgroundColor: '#F8F8F8' }}>
         {/* Content */}
-        <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-12">
           <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide" 
                style={{ backgroundColor: '#EC3237', color: '#F8F8F8', fontFamily: 'Montserrat Alternates, sans-serif' }}>
             <Target className="w-4 h-4 mr-2" />

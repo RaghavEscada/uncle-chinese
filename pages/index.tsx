@@ -1,5 +1,5 @@
 "use client";
-import { Curve, Footer, Ready } from "@/components";
+import { Footer, Ready } from "@/components";
 import { About, Clients, Hero, Projects, VideoHome, X } from "@/container";
 import { useEffect, useRef, useState } from "react";
 
@@ -133,12 +133,12 @@ export default function Home() {
 		<div className="relative w-full h-full">
 			{/* Main content, including Hero (3D model) */}
 			<div className={`transition-opacity duration-700 ${isLoading ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-				<Curve backgroundColor={"#f1f1f1"}>
+				
 					<Hero />
 					<About />
 					<Clients />
 					<Ready />
-				</Curve>
+			
 			</div>
 
 			{/* Loader overlay */}

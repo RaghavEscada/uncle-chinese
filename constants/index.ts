@@ -7,7 +7,7 @@ export const navbarItems = [
   {
     id: 1,
     title: "About",
-    href: "/",
+    href: "/about-us",
   },
   {
     id: 2,

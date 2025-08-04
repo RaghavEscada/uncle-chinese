@@ -23,24 +23,49 @@ export default function Hero() {
           style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
         />
       </div>
-      {/* Overlay Text */}
+      
+      {/* Subtle Background Overlay */}
+      <div className="absolute inset-0 z-5 bg-black/20"></div>
+      
+      {/* Overlay Text with Clean Effects */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none">
-        <h1 className="font-brice text-6xl md:text-8xl lg:text-9xl font-semibold leading-none tracking-tighter mb-8 text-center" style={{ textShadow: '0 8px 32px rgba(0,0,0,0.95)' }}>
-          <span className="block text-[#EC3237]">UNCLE'S</span>
-          <span className="block text-[#F5DF19]">CHINESE</span>
+        <h1 className="font-brice text-6xl md:text-8xl lg:text-9xl font-black leading-none tracking-tighter mb-8 text-center" 
+            style={{ 
+              textShadow: '0 8px 32px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.5)'
+            }}>
+          <span className="block text-[#EC3237]" 
+                style={{ 
+                  textShadow: '0 8px 32px rgba(0,0,0,0.9), 0 0 40px rgba(236,50,55,0.3)'
+                }}>
+            UNCLE'S
+          </span>
+          <span className="block text-[#F5DF19]" 
+                style={{ 
+                  textShadow: '0 8px 32px rgba(0,0,0,0.9), 0 0 40px rgba(245,223,25,0.3)'
+                }}>
+            CHINESE
+          </span>
         </h1>
+        
         <div className="mb-12">
-          <p className="text-lg md:text-2xl font-light text-white/90 mb-2" style={{ textShadow: '0 4px 16px rgba(0,0,0,0.85)' }}>
+          <p className="text-lg md:text-2xl font-bold text-white mb-2 uppercase tracking-wider" 
+             style={{ 
+               textShadow: '0 4px 16px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.2)'
+             }}>
             Authentic Thai & Chinese Cuisine
           </p>
-          <p className="text-sm md:text-base text-white/90 font-extralight tracking-wide max-w-2xl mx-auto" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.85)' }}>
+          <p className="text-sm md:text-base text-white font-semibold tracking-wide max-w-2xl mx-auto" 
+             style={{ 
+               textShadow: '0 2px 12px rgba(0,0,0,0.8)'
+             }}>
             Bold flavors and warm hospitality — 24 years of tradition across 6 locations
           </p>
         </div>
       </div>
+      
       {/* UC Logo overlay */}
       <div className="absolute bottom-10 pt-11 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="bg-white backdrop-blur-sm rounded-full p-3 shadow-lg">
+        <div className="bg-white/95 backdrop-blur-sm rounded-full p-3 shadow-xl border border-yellow-400">
           <img 
             src="/uc.png" 
             alt="Uncle's Chinese" 

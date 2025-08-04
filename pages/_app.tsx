@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { Footer, Navbar } from "@/components";
+import Preloader from "@/components/preloader";
 import { AnimatePresence } from "framer-motion";
 import CustomCursor from "@/components/CustomCursor";
 import { useEffect } from "react";
@@ -56,6 +57,7 @@ export default function App({
 
 	return (
 		<>
+			<Preloader />
 			<CustomCursor />
 			<Navbar />
 			<AnimatePresence mode="wait">

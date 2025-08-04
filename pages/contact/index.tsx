@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Curve } from "@/components";
+
 import { Herocontact, Form, FAQ, Socials } from "@/container";
 
 
@@ -24,7 +24,7 @@ export default function Contact() {
   return (
   
       <div data-scroll-container ref={containerRef}>
-        <Curve backgroundColor={"#f1f1f1"}>
+    
           <Herocontact />
           <Form />
           <div className="mb-20">
@@ -33,7 +33,7 @@ export default function Contact() {
           <div className="mb-20">
             <FAQ />
           </div>
-        </Curve>
+
       </div>
   
   );
