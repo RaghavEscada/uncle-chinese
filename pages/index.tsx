@@ -12,14 +12,30 @@ export default function Home() {
 		// Set mounted
 		setIsMounted(true);
 		
-		// Simple 5-second timer
+		// Preload the Sketchfab animation
+		const preloadIframe = document.createElement('iframe');
+		preloadIframe.src = "https://sketchfab.com/models/66f01ab2a0fd4a589ddecb0a565adfba/embed?autostart=1&ui_hint=0";
+		preloadIframe.style.display = 'none';
+		preloadIframe.style.position = 'absolute';
+		preloadIframe.style.left = '-9999px';
+		
+		// Add to DOM to start loading
+		document.body.appendChild(preloadIframe);
+		
+		// 7-second timer to allow for preloading
 		const timer = setTimeout(() => {
 			setIsLoading(false);
-		}, 5000);
+			// Remove the preloaded iframe
+			document.body.removeChild(preloadIframe);
+		}, 7000);
 
 		return () => {
 			clearTimeout(timer);
 			setIsMounted(false);
+			// Clean up preloaded iframe if component unmounts
+			if (preloadIframe.parentNode) {
+				preloadIframe.parentNode.removeChild(preloadIframe);
+			}
 		};
 	}, []);
 
@@ -85,7 +101,7 @@ export default function Home() {
 						<motion.div
 							initial={{ width: 0 }}
 							animate={{ width: "100%" }}
-							transition={{ duration: 5, ease: "linear" }}
+							transition={{ duration: 7, ease: "linear" }}
 							className="mt-8 h-1 bg-red-500 rounded-full max-w-xs mx-auto"
 						/>
 					</div>
