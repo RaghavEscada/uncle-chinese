@@ -163,7 +163,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end pt-12 border-t border-gray-800">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end pt-12 pb-8 border-t border-gray-800">
           
           {/* Left - Copyright */}
           <div className="mb-8 lg:mb-0">
@@ -223,6 +223,9 @@ export default function Footer() {
            </div>
         </div>
       </div>
+      
+      {/* Full width black rectangle at bottom */}
+      <div className="w-screen h-16 bg-black absolute bottom-0 left-0 z-50"></div>
     </footer>
   );
 }
